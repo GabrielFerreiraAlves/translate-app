@@ -5,7 +5,7 @@ import type { Language } from '../lib/types';
 export default function Layout() {
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
-  const text = useRef<HTMLTextAreaElement>(null);
+  const text = useRef<HTMLTextAreaElement | null>(null);
   const [translatedText, setTranslatedText] = useState('');
   const baseUrl: string = import.meta.env.VITE_API_URL;
   const key: string = import.meta.env.VITE_API_KEY;
