@@ -5,7 +5,7 @@ import { Language } from '../lib/types'
 export default function Layout() {
   const [from,setFrom] = useState(null)
   const [to,setTo] = useState(null)
-  const text = useRef()
+  const text = useRef<HTMLTextAreaElement>(null)
   const [translatedText,setTranslatedText] = useState('')
   const baseUrl: string = import.meta.env.VITE_API_URL
   const key: string = import.meta.env.VITE_API_KEY
@@ -13,7 +13,7 @@ export default function Layout() {
   const onHandleChangeFrom = (selectedOption: Language) => setFrom(selectedOption.value)
   const onHandleChangeTo = (selectedOption: Language) => setTo(selectedOption.value)
 
-  const onHandleTextChange = event => {
+  const onHandleTextChange = (event: ChangeEvent<HTMLInputElement>) => {
 
     if(!from) alert('Selecione um idioma de origem')
     if(!to) alert('Selecione um idioma para a tradução')
