@@ -1,4 +1,4 @@
-import { Language } from './types.d.ts'
+import type { Language } from './types.d.ts'
 
 export const languages: Language[] = [
   {
