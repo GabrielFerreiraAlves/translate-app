@@ -13,7 +13,7 @@ export default function Layout() {
   const onHandleChangeFrom = (selectedOption: Language) => setFrom(selectedOption.value)
   const onHandleChangeTo = (selectedOption: Language) => setTo(selectedOption.value)
 
-  const onHandleTextChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const onHandleTextChange = () => {
 
     if(!from) alert('Selecione um idioma de origem')
     if(!to) alert('Selecione um idioma para a tradução')
