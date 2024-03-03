@@ -19,7 +19,7 @@ export default function Layout() {
 
     if (text.current !== null && from && to) {
       setTimeout(() => {
-        const url = `${baseUrl}q=${text.current.value}&langpair=${from}|${to}&key=${key}`;
+        const url = `${baseUrl}q=${text.current?.value}&langpair=${from}|${to}&key=${key}`;
         
         fetch(url)
         .then(res => res.json())
