@@ -17,7 +17,7 @@ export default function Layout() {
     if (!from) alert('Selecione um idioma de origem');
     if (!to) alert('Selecione um idioma para a tradução');
 
-    if (text.current && from && to) {
+    if (text.current !== null && from && to) {
       setTimeout(() => {
         const url = `${baseUrl}q=${text.current.value}&langpair=${from}|${to}&key=${key}`;
         
