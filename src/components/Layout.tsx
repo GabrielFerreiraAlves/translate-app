@@ -1,6 +1,6 @@
 import { useState,useRef } from 'react'
 import SelectGroup from './Select'
-import { Language } from '../lib/types'
+import type Language from '../lib/types'
 
 export default function Layout() {
   const [from,setFrom] = useState(null)
